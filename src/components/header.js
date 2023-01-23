@@ -1,4 +1,4 @@
-import hamburgerMenu from "../hamburger-menu.svg"
+import hamburgerMenu from "../images/hamburger-menu.svg"
 function Header(props) {
 	return (
 		<header >

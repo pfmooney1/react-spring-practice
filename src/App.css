@@ -90,3 +90,37 @@ li:hover {
 	color: lightgreen;
 	font-weight: 900;
 }
+
+
+.notification {
+	width: 100%;
+	padding: 5px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 20px;
+	border-top: 1px solid black;
+	border-bottom: 2px solid black;
+	position: absolute;
+	z-index: 100;
+	background-color: inherit;
+	background-color: darkolivegreen;
+}
+
+.notification img {
+	height: 50px;
+	width: 50px;
+	padding-left: 20px
+}
+
+.notification .close {
+	justify-self: flex-end;
+	margin-right: 10px;
+	margin-left: auto;
+	color: white;
+	background-color: transparent;
+	font-size: 2em;
+	font-weight: 500;
+	border: none;
+}
