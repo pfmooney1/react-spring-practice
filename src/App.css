@@ -1,38 +1,92 @@
 .App {
-  text-align: center;
+	text-align: center;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	color: white;
+	z-index: 1;
+	position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+	align-self: flex-start;
+	display: flex;
+	flex-direction: row;
+	height: 60px;
+	border-bottom: 1px solid black;
+	box-shadow: 3px 0 3px #000000;
+	width: 100%;
+	z-index: 10;
+	background-color: inherit;
+	padding: 0 10px;
+	box-sizing: border-box;
+	position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1 {
+	padding: 5px;
+	font-size: 18px;
+	text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+	position: relative;
+	z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.chanceCard {
+	background-color: orange;
+	color: black;
+	border: 1px solid #3d1c00;
+	border-radius: 10px;
+	margin: 20px 0;
+	perspective: 1000px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chanceCardBack {
+	position: relative;
+	background-color: inherit;
+	color: inherit;
+	transform: rotateY(180deg);
+}
+
+.chanceCardFront {
+	position: relative;
+	background-color: inherit;
+	color: inherit;
+}
+
+.menuButton {
+	margin-right: 0;
+	margin-left: auto;
+	align-self: center;
+}
+
+.dropdownMenu {
+	border: 1px solid black;
+	background-color: inherit;
+	box-shadow: 3px 0 3px #000000;
+	text-align: left;
+	width: 100%;
+	z-index: 5;
+	position: fixed;
+	padding-top: 60px;
+}
+
+.dropdownMenu ul {
+	list-style-type: none;
+}
+
+li:hover {
+	text-decoration: underline;
+	color: lightgreen;
+	font-weight: 900;
 }
