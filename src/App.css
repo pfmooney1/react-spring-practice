@@ -1,34 +1,34 @@
 .App {
-	text-align: center;
+	align-items: center;
 	background-color: #282c34;
-	min-height: 100vh;
+	color: white;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: flex-start;
-	color: white;
-	z-index: 1;
+	min-height: 100vh;
 	position: relative;
+	text-align: center;
+	z-index: 1;
 }
 
 header {
 	align-self: flex-start;
+	background-color: inherit;
+	border-bottom: 1px solid black;
+	box-shadow: 3px 0 3px #000000;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
 	height: 60px;
-	border-bottom: 1px solid black;
-	box-shadow: 3px 0 3px #000000;
+	padding: 0 10px;
+	position: relative;
 	width: 100%;
 	z-index: 10;
-	background-color: inherit;
-	padding: 0 10px;
-	box-sizing: border-box;
-	position: relative;
 }
 
 header h1 {
-	padding: 5px;
 	font-size: 18px;
+	padding: 5px;
 	text-align: left;
 }
 
@@ -38,47 +38,53 @@ main {
 }
 
 .chanceCard {
-	background-color: orange;
-	color: black;
-	border: 1px solid #3d1c00;
-	border-radius: 10px;
-	margin: 20px 0;
-	perspective: 1000px;
-	display: flex;
 	align-items: center;
-	justify-content: center;
-	width: 300px;
+	background-color: orange;
+	border-radius: 10px;
+	border: 1px solid #3d1c00;
+	color: black;
+	cursor: pointer;
+	display: flex;
 	height: 200px;
+	justify-content: center;
+	margin: 20px 0;
+	overflow: hidden;
+	perspective: 600px;
+	width: 300px;
+}
+
+.chanceCard * {
+	cursor: pointer;
 }
 
 .chanceCardBack {
-	position: relative;
 	background-color: inherit;
 	color: inherit;
+	position: relative;
 	transform: rotateY(180deg);
 }
 
 .chanceCardFront {
-	position: relative;
 	background-color: inherit;
 	color: inherit;
+	position: relative;
 }
 
 .menuButton {
-	margin-right: 0;
-	margin-left: auto;
 	align-self: center;
+	margin-left: auto;
+	margin-right: 0;
 }
 
 .dropdownMenu {
-	border: 1px solid black;
 	background-color: inherit;
+	border: 1px solid black;
 	box-shadow: 3px 0 3px #000000;
+	padding-top: 60px;
+	position: fixed;
 	text-align: left;
 	width: 100%;
 	z-index: 5;
-	position: fixed;
-	padding-top: 60px;
 }
 
 .dropdownMenu ul {
@@ -86,41 +92,41 @@ main {
 }
 
 li:hover {
-	text-decoration: underline;
 	color: lightgreen;
 	font-weight: 900;
+	text-decoration: underline;
 }
 
 
 .notification {
-	width: 100%;
-	padding: 5px;
-	height: 60px;
-	display: flex;
 	align-items: center;
-	justify-content: start;
-	gap: 20px;
-	border-top: 1px solid black;
-	border-bottom: 2px solid black;
-	position: absolute;
-	z-index: 100;
-	background-color: inherit;
 	background-color: darkolivegreen;
+	border-bottom: 2px solid black;
+	border-top: 1px solid black;
+	box-sizing: border-box;
+	display: flex;
+	gap: 20px;
+	height: 60px;
+	justify-content: start;
+	padding: 5px;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
 }
 
 .notification img {
 	height: 50px;
+	padding-left: 20px;
 	width: 50px;
-	padding-left: 20px
 }
 
 .notification .close {
-	justify-self: flex-end;
-	margin-right: 10px;
-	margin-left: auto;
-	color: white;
 	background-color: transparent;
+	border: none;
+	color: white;
 	font-size: 2em;
 	font-weight: 500;
-	border: none;
+	justify-self: flex-end;
+	margin-left: auto;
+	margin-right: 10px;
 }

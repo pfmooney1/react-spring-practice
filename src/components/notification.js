@@ -24,9 +24,11 @@ function Notification(props) {
 		},
 	]
 	let randomNumber = Math.floor(Math.random() * notifications.length);
-
+	const notifyMe = useSpring({
+		translateY: props.notificationVisible ? 0 : -150,
+	})
 	return (
-		<animated.div className='notification' style={props.notifyMe}>
+		<animated.div className='notification' style={notifyMe}>
 			<img src={notifications[randomNumber].image} />
 			<h2>{notifications[randomNumber].text}</h2>
 			<button className="close">x</button>
