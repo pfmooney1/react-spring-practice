@@ -74,6 +74,12 @@ function ChanceCard(props) {
 	let randomNumber = Math.floor(Math.random() * cards.length);
 	return (
 		<animated.div className="chanceCard" style={flipOver} onClick={flipCard}>
+			{/* // ! ---------------------------
+			// ! ---------------------------
+			// ! -Make it so that it doesn't rerender: Opacity instead.
+			// ! ---------------------------
+			// ! --------------------------- 
+			*/}
 			{flipped && <div className='chanceCardFront'>
 				<h1>{cards[randomNumber].textA}</h1>
 				<h3>{cards[randomNumber].textB}</h3>

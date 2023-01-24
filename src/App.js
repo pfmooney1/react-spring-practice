@@ -31,6 +31,7 @@ function App() {
 			<Notification toggleNotification={toggleNotification} notificationVisible={notificationVisible}/> 
 			<main>
 				<button onClick={notify}>Test notifications</button>
+			{/* // ! -Make it so that it doesn't rerender: Opacity instead. */}
 				<ChanceCard />
 			</main>
 		</div>
