@@ -37,29 +37,29 @@ function App() {
 		expires: 1000
 	});
 
-	return transition((style, item) => (
-		<div>
-			<div className="App">
-				<animated.h2 style={style}>useTransition {toggled.toString()}</animated.h2>
-				<button onClick={() => toggle(!toggled)}>
-					Go home
-				</button>
-			</div>
-		</div>
-	));
-
-
-	// return (
-	// 	<div className="App">
-	// 		<Header dropDownToggle={dropDownToggle} />
-	// 		<DropdownMenu dropdownVisible={dropdownVisible} />
-	// 		<Notification toggleNotification={toggleNotification} notificationVisible={notificationVisible}/> 
-	// 		<main>
-	// 			<button onClick={notify}>Test notifications</button>
-	// 			<ChanceCard />
-	// 		</main>
+	// return transition((style, item) => (
+	// 	<div>
+	// 		<div className="App">
+	// 			<animated.h2 style={style}>useTransition {toggled.toString()}</animated.h2>
+	// 			<button onClick={() => toggle(!toggled)}>
+	// 				Go home
+	// 			</button>
+	// 		</div>
 	// 	</div>
-	// );
+	// ));
+
+
+	return (
+		<div className="App">
+			<Header dropDownToggle={dropDownToggle} />
+			<DropdownMenu dropdownVisible={dropdownVisible} />
+			<Notification toggleNotification={toggleNotification} notificationVisible={notificationVisible}/> 
+			<main>
+				<button onClick={notify}>Test notifications</button>
+				<ChanceCard />
+			</main>
+		</div>
+	);
 }
 
 export default App;
