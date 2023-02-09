@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSpring, animated } from '@react-spring/web';
+import { useSpring, useTransition, animated } from '@react-spring/web';
 import './App.css';
 import Header from './components/header';
 import DropdownMenu from './components/dropdown-menu';
@@ -24,18 +24,42 @@ function App() {
 		}, 2500);
 	}
 
-	return (
-		<div className="App">
-			<Header dropDownToggle={dropDownToggle} />
-			<DropdownMenu dropdownVisible={dropdownVisible} />
-			<Notification toggleNotification={toggleNotification} notificationVisible={notificationVisible}/> 
-			<main>
-				<button onClick={notify}>Test notifications</button>
-			{/* // ! -Make it so that it doesn't rerender: Opacity instead. */}
-				<ChanceCard />
-			</main>
+
+	// ! Use Transition
+	let [toggled, toggle] = useState(true);
+	const transition = useTransition(toggled, {
+		from: { rotate: "-90deg"},
+		enter: { rotate: "0deg" },
+		leave: { rotate: "-90deg" },
+		config: {
+			duration: 500,
+		},
+		expires: 1000
+	});
+
+	return transition((style, item) => (
+		<div>
+			<div className="App">
+				<animated.h2 style={style}>useTransition {toggled.toString()}</animated.h2>
+				<button onClick={() => toggle(!toggled)}>
+					Go home
+				</button>
+			</div>
 		</div>
-	);
+	));
+
+
+	// return (
+	// 	<div className="App">
+	// 		<Header dropDownToggle={dropDownToggle} />
+	// 		<DropdownMenu dropdownVisible={dropdownVisible} />
+	// 		<Notification toggleNotification={toggleNotification} notificationVisible={notificationVisible}/> 
+	// 		<main>
+	// 			<button onClick={notify}>Test notifications</button>
+	// 			<ChanceCard />
+	// 		</main>
+	// 	</div>
+	// );
 }
 
 export default App;

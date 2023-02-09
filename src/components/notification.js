@@ -29,7 +29,7 @@ function Notification(props) {
 	})
 	return (
 		<animated.div className='notification' style={notifyMe}>
-			<img src={notifications[randomNumber].image} />
+			<img src={notifications[randomNumber].image} alt="" />
 			<h2>{notifications[randomNumber].text}</h2>
 			<button className="close">x</button>
 		</animated.div>
